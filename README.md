@@ -1,246 +1,279 @@
-# Intelligent Candidate Discovery
+# 🚀 Intelligent Candidate Discovery
 
-## Problem Statement
+## Data & AI Challenge 2026
 
-Build an intelligent candidate ranking system that identifies the most suitable candidates for a Senior AI Engineer role.
-
-Traditional Applicant Tracking Systems (ATS) rely heavily on keyword matching, which often misses highly relevant candidates whose experience is described differently.
-
-This solution combines:
-
-* Semantic Understanding
-* Retrieval Intelligence
-* Ranking Intelligence
-* Recommendation System Experience
-* Product Company Experience
-* Behavioral Hiring Signals
-* Explainable AI
-
-to generate high-quality candidate rankings.
+An AI-powered candidate ranking system designed to intelligently identify and rank the most relevant candidates for a Senior AI Engineer role using candidate profiles, career history, skills, and behavioral signals.
 
 ---
 
-## Dataset
+## 👨‍💻 Developer
+
+**Kona Venkata Datta Sai Krishna**
+B.Tech – Computer Science & Engineering (Artificial Intelligence)
+Amrita Vishwa Vidyapeetham, Amaravati
+Graduation: 2026
+
+GitHub: https://github.com/Dattuking
+
+---
+
+# 🎯 Problem Statement
+
+Traditional Applicant Tracking Systems (ATS) rely heavily on keyword matching, often overlooking highly qualified candidates whose experience is described differently.
+
+The objective of this project is to build an intelligent candidate discovery system capable of:
+
+* Understanding job requirements
+* Evaluating candidate relevance
+* Leveraging behavioral hiring signals
+* Ranking candidates intelligently
+* Providing explainable recommendations
+
+---
+
+# 📊 Dataset Overview
 
 The challenge dataset contains:
 
 * 100,000 Candidate Profiles
+* Skills & Technologies
 * Career History
-* Skills
-* Education
+* Education Details
 * Certifications
 * Languages
 * Behavioral Signals
 
-Examples of behavioral signals:
+### Behavioral Signals Used
 
-* Open To Work
+* Open To Work Status
 * Recruiter Response Rate
 * Interview Completion Rate
 * Offer Acceptance Rate
-* GitHub Activity
+* GitHub Activity Score
+* Profile Completeness
 * Search Appearances
 * Saved By Recruiters
 
 ---
 
-## Solution Architecture
+# 🏗️ System Architecture
 
-Job Description
-↓
-Requirement Extraction
-↓
-Feature Engineering
-↓
-Semantic Matching
-↓
-Behavioral Intelligence
-↓
-Scoring Engine
-↓
-Explainability Layer
-↓
-Top 100 Candidate Selection
-↓
-submission.csv
+![Architecture](docs/architecture.png)
+
+### Architecture Flow
+
+Job Description → Requirement Understanding → Feature Engineering → Candidate Evaluation → Ranking Engine → Explainability Layer → Top Candidate Selection
 
 ---
 
-## Features Used
+# 🔄 Workflow
 
-### Technical Features
+![Workflow](docs/workflow.png)
 
-* Skill Match Score
-* Retrieval Experience Score
-* Ranking Experience Score
-* Recommendation Experience Score
-* Product Company Experience
-* Education Score
-* Location Score
+### Workflow Steps
 
-### Semantic Features
+1. Load Candidate Dataset
+2. Parse Candidate Information
+3. Extract Candidate Features
+4. Evaluate Behavioral Signals
+5. Calculate Candidate Score
+6. Rank Candidates
+7. Generate Submission File
 
-* Candidate ↔ JD Similarity
-* Retrieval Semantic Similarity
-* Ranking Semantic Similarity
-* Recommendation Semantic Similarity
+---
 
-### Behavioral Features
+# 📈 Methodology
 
-* Recruiter Response Rate
-* Open To Work
-* Offer Acceptance Rate
-* Interview Completion Rate
-* GitHub Activity Score
-* Saved By Recruiters
-* Search Appearance Score
+![Methodology](docs/methodology.png)
+
+The system combines:
+
+### Technical Signals
+
+* Skill Matching
+* Experience Matching
+* Job Title Relevance
+* Career Progression
+
+### Behavioral Signals
+
+* Recruiter Engagement
 * Profile Completeness
+* GitHub Activity
+* Open-To-Work Status
+
+### Ranking Signals
+
+* Candidate Relevance
+* Professional Activity
+* Hiring Readiness
 
 ---
 
-## Scoring Formula
+# ⚙️ Features Used
 
-Final Score =
-
-0.20 × Semantic Similarity
-
-0.15 × Skill Match
-
-0.15 × Retrieval Experience
-
-0.10 × Product Experience
-
-0.10 × Title Relevance
-
-0.10 × Experience Match
-
-0.20 × Behavioral Signals
+| Category   | Features                  |
+| ---------- | ------------------------- |
+| Experience | Years of Experience       |
+| Skills     | Technical Skills          |
+| Profile    | Current Job Title         |
+| Behavioral | Recruiter Response Rate   |
+| Behavioral | Interview Completion Rate |
+| Behavioral | GitHub Activity Score     |
+| Behavioral | Profile Completeness      |
+| Hiring     | Open To Work Status       |
 
 ---
 
-## Repository Structure
+# 🧮 Candidate Scoring
 
+The final candidate score is computed using weighted profile and behavioral factors.
+
+### Score Components
+
+* Experience Match
+* Recruiter Response Rate
+* Interview Completion Rate
+* Profile Completeness
+* GitHub Activity
+* Open-To-Work Status
+
+The Top 100 candidates are selected based on the final ranking score.
+
+---
+
+# 📂 Repository Structure
+
+```text
 Intelligent-Candidate-Discovery/
 
-├── data/
-
-│ └── candidates.jsonl
-
-├── src/
-
-│ ├── config.py
-
-│ ├── jd_parser.py
-
-│ ├── feature_extractor.py
-
-│ ├── semantic_matcher.py
-
-│ ├── scorer.py
-
-│ ├── explainability.py
-
-│ ├── rank_candidates.py
-
-│ └── utils.py
-
-├── outputs/
-
-│ └── submission.csv
-
 ├── docs/
-
-│ ├── architecture.png
-
-│ ├── workflow.png
-
-│ └── methodology.png
-
+│   ├── architecture.png
+│   ├── workflow.png
+│   └── methodology.png
+│
+├── outputs/
+│   └── submission.csv
+│
+├── src/
+│   ├── config.py
+│   ├── jd_parser.py
+│   ├── feature_extractor.py
+│   ├── semantic_matcher.py
+│   ├── scorer.py
+│   ├── explainability.py
+│   ├── rank_candidates.py
+│   └── utils.py
+│
 ├── main.py
-
 ├── requirements.txt
-
-└── README.md
+├── README.md
+└── .gitignore
+```
 
 ---
 
-## Installation
+# 🚀 Installation
 
-Clone repository:
+Clone the repository:
 
-git clone https://github.com/your-team/intelligent-candidate-discovery
+```bash
+git clone https://github.com/Dattuking/Intelligent-Candidate-Discovery.git
+```
 
-cd intelligent-candidate-discovery
+Move into project folder:
+
+```bash
+cd Intelligent-Candidate-Discovery
+```
 
 Install dependencies:
 
+```bash
 pip install -r requirements.txt
+```
 
 ---
 
-## Run
+# ▶️ Run Project
 
+```bash
 python main.py
+```
 
 ---
 
-## Output
+# 📄 Output
 
 The system generates:
 
+```text
 outputs/submission.csv
+```
 
 Format:
 
+```csv
 candidate_id,rank,score,reasoning
+```
+
+Example:
+
+```csv
+CAND_001245,1,0.946321,"Strong experience and recruiter signals"
+```
 
 ---
 
-## Explainability
+# 🔍 Explainability
 
 Every ranked candidate includes:
 
-* Match Score
-* Key Strengths
-* Potential Gaps
+* Candidate Score
+* Ranking Position
 * Recruiter-Friendly Explanation
 
 Example:
 
-Strong semantic alignment with Senior AI Engineer role; Demonstrated retrieval and search system experience; Experience with ranking systems; Excellent recruiter engagement signals.
+> Strong experience and recruiter signals
+
+This ensures transparency in ranking decisions.
 
 ---
 
-## Innovation
+# 📊 Results
 
-Our solution goes beyond keyword matching by combining:
+✅ Successfully processed 100,000 candidate profiles
 
-* Semantic Retrieval
-* Behavioral Intelligence
-* Explainable AI
-* Career Trajectory Analysis
-* Product Company Experience
-* Retrieval & Ranking Expertise
+✅ Generated Top 100 ranked candidates
 
-This approach aligns more closely with real-world recruiter decision-making.
+✅ Submission file validated successfully
+
+✅ GitHub repository published
 
 ---
 
-## Future Improvements
+# 🌟 Future Enhancements
 
 * Learning-to-Rank (XGBoost Ranker)
+* Semantic Embeddings
+* Hybrid Retrieval Systems
+* Candidate Knowledge Graph
 * LLM-Based Re-ranking
-* Hybrid Retrieval
-* Graph-Based Candidate Similarity
-* Agentic Candidate Discovery
 * Real-Time Recruiter Feedback Loop
 
 ---
 
+# 🏆 Project Outcome
+
+This solution demonstrates how AI-driven ranking can improve candidate discovery beyond traditional keyword-based filtering while maintaining scalability for large candidate datasets.
+
+---
+
 ## Team
+**KONA VENKATA DATTA SAI KRISHNA**
+**PromptStorm**
 
-PromptStorm
+**Data & AI Challenge 2026**
 
-Data & AI Challenge 2026
-
-Intelligent Candidate Discovery
+**Intelligent Candidate Discovery**
