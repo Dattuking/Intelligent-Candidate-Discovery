@@ -1,0 +1,39 @@
+**pycache**/
+*.pyc
+*.pyo
+
+# Virtual environments
+
+venv/
+env/
+.venv/
+
+# IDE files
+
+.vscode/
+.idea/
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# Jupyter
+
+.ipynb_checkpoints/
+
+# Logs
+
+*.log
+
+# Temporary files
+
+*.tmp
+
+# Python cache
+
+.pytest_cache/
+
+# Large datasets (optional)
+
+data/*.jsonl
